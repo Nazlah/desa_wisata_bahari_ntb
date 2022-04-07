@@ -28,7 +28,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/home', function () {
         return view('admin/home');
     });
-    Route::get('/admin/edit_profile', function () {
+    Route::get('/admin/edit_profile/{id}', function () {
         return view('admin/edit_profile');
     });
 

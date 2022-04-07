@@ -3,6 +3,6 @@
 
 @section('container')
 
-<h1>test admin</h1>
+<h1>test edit profile</h1>
 
 @endsection

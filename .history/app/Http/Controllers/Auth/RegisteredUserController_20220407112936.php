@@ -50,9 +50,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        /* set role in register
-         * 
-         */
+        /* set role in register */
         $user->roles()->attach(Role::where('name', 'Admin')->first());
 
         return redirect(RouteServiceProvider::HOME);
