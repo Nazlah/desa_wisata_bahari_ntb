@@ -11,9 +11,6 @@ class UserController extends Controller
     {
         $data = User::findOrFail($id);
         $data->name = $request->name;
-        //$data->email = $request->email;
         $data->save();
-
-        //return view('/admin/edit_profile');
     }
 }

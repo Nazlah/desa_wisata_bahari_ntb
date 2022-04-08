@@ -41,11 +41,12 @@
     function update(id) {
         var email = $("#inputEmail").val();
         var name = $("#inputName").val();
+        debugger;
         $.ajax({
             type: "get",
             url: "{{ url('/admin/edit_profile/update') }}/" + id,
             data: "name=" + name,
-            success: read(),
+            success: alert('succes'),
             /* error: function(xhr, status, error) {
                 alert("Error!" + xhr.status);
             }, */

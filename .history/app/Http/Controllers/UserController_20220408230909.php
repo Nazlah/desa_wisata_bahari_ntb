@@ -14,6 +14,6 @@ class UserController extends Controller
         //$data->email = $request->email;
         $data->save();
 
-        //return view('/admin/edit_profile');
+        return view('admin');
     }
 }

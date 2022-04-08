@@ -41,6 +41,7 @@
     function update(id) {
         var email = $("#inputEmail").val();
         var name = $("#inputName").val();
+        debugger;
         $.ajax({
             type: "get",
             url: "{{ url('/admin/edit_profile/update') }}/" + id,

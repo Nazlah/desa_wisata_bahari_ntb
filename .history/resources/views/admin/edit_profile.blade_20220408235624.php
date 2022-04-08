@@ -35,17 +35,20 @@
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script>
     function read() {
-        $.get("{{ url('/admin/edit_profile/') }}");
+        $.get("{{ url('read') }}", {}, function(data, status) {
+            $("#read").html(data);
+        });
     }
 
     function update(id) {
         var email = $("#inputEmail").val();
         var name = $("#inputName").val();
+        debugger;
         $.ajax({
             type: "get",
             url: "{{ url('/admin/edit_profile/update') }}/" + id,
             data: "name=" + name,
-            success: read(),
+            success: alert('succes'),
             /* error: function(xhr, status, error) {
                 alert("Error!" + xhr.status);
             }, */

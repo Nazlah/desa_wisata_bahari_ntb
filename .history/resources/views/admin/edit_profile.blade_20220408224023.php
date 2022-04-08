@@ -34,21 +34,17 @@
 @endsection
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script>
-    function read() {
-        $.get("{{ url('/admin/edit_profile/') }}");
-    }
+    console.log('teast');
 
     function update(id) {
-        var email = $("#inputEmail").val();
-        var name = $("#inputName").val();
+        var email = $("#inputemail").val();
+        var name = $("#inputname").val();
+        debugger;
         $.ajax({
             type: "get",
-            url: "{{ url('/admin/edit_profile/update') }}/" + id,
-            data: "name=" + name,
-            success: read(),
-            /* error: function(xhr, status, error) {
-                alert("Error!" + xhr.status);
-            }, */
+            url: "{{ url('/admin/edit_profile/update') }}/1",
+            data: "name=" + name + "email" + email,
+            success: alert('succes update'),
 
         });
 

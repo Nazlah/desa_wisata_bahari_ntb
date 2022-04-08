@@ -44,7 +44,10 @@
         $.ajax({
             type: "get",
             url: "{{ url('/admin/edit_profile/update') }}/" + id,
-            data: "name=" + name,
+            data: {
+                "name=": name,
+                "email=": email
+            },
             success: read(),
             /* error: function(xhr, status, error) {
                 alert("Error!" + xhr.status);

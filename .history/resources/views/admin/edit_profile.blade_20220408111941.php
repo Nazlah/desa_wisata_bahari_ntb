@@ -16,14 +16,14 @@
     </div>
 
     <!-- <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Password</label>
-                    <input id="password" class="form-control" type="password" name="password" required autocomplete="new-password">
-                </div>
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input id="password" class="form-control" type="password" name="password" required autocomplete="new-password">
+    </div>
 
-                <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Confirm Password</label>
-                    <input id="password_confirm" class="form-control" type="password" name="password_confirm">
-                </div> -->
+    <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Confirm Password</label>
+        <input id="password_confirm" class="form-control" type="password" name="password_confirm">
+    </div> -->
 
 
     <div class="col-12">
@@ -32,26 +32,27 @@
 </form>
 
 @endsection
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
 <script>
+    $(document).ready(function() {
+        read()
+    });
+
     function read() {
-        $.get("{{ url('/admin/edit_profile/') }}");
+        $.get("{{ url('read') }}", {}, function(data, status) {
+            $("#read").html(data);
+        });
     }
 
     function update(id) {
-        var email = $("#inputEmail").val();
-        var name = $("#inputName").val();
+        var name = $("#email").val();
+        var name = $("#name").val();
+
         $.ajax({
             type: "get",
-            url: "{{ url('/admin/edit_profile/update') }}/" + id,
+            url: "{{ url('update') }}/" + id,
             data: "name=" + name,
-            success: read(),
-            /* error: function(xhr, status, error) {
-                alert("Error!" + xhr.status);
-            }, */
-
+            success: alert('succes update')
         });
-
-
     }
 </script>

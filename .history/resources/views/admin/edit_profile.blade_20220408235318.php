@@ -34,9 +34,8 @@
 @endsection
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script>
-    function read() {
-        $.get("{{ url('/admin/edit_profile/') }}");
-    }
+    function read()
+
 
     function update(id) {
         var email = $("#inputEmail").val();
@@ -45,10 +44,10 @@
             type: "get",
             url: "{{ url('/admin/edit_profile/update') }}/" + id,
             data: "name=" + name,
-            success: read(),
-            /* error: function(xhr, status, error) {
+            success: alert('succes'),
+            error: function(xhr, status, error) {
                 alert("Error!" + xhr.status);
-            }, */
+            },
 
         });
 
