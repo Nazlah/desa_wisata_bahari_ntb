@@ -19,13 +19,14 @@ class UserController extends Controller
     public function read()
     {
         if (request()->user()->hasRole('admin')) {
-            $data = User::all();
-            return view('/admin/read')->with([
-                'data' => $data
-            ]);
+            return view('admin.index');
         } else {
-            return redirect('/user/home');
+            return redirect('/');
         }
+        $data = User::all();
+        return view('/admin/read')->with([
+            'data' => $data
+        ]);
     }
 
     public function create()

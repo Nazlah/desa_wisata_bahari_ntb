@@ -26,7 +26,6 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 Route::group(['middleware' => ['auth']], function () {
-
     //Route for admin
     Route::get('/admin/home', function () {
         return view('admin/home');
@@ -44,7 +43,6 @@ Route::group(['middleware' => ['auth']], function () {
     });
     Route::get('/admin/read', [UserController::class, 'read']);
     Route::get('/admin/create', [UserController::class, 'create']);
-    Route::get('/admin/store', [UserController::class, 'store']);
 
     //Route for user
     Route::get('/user/home', function () {

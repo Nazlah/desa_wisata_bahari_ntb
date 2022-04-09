@@ -24,7 +24,7 @@ class UserController extends Controller
                 'data' => $data
             ]);
         } else {
-            return redirect('/user/home');
+            return redirect('/');
         }
     }
 

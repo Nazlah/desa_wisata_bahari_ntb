@@ -15,17 +15,12 @@ class UserController extends Controller
     {
         $this->middleware('auth');
     }
-
     public function read()
     {
-        if (request()->user()->hasRole('admin')) {
-            $data = User::all();
-            return view('/admin/read')->with([
-                'data' => $data
-            ]);
-        } else {
-            return redirect('/user/home');
-        }
+        $data = User::all();
+        return view('/admin/read')->with([
+            'data' => $data
+        ]);
     }
 
     public function create()

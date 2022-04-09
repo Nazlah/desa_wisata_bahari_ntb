@@ -26,7 +26,6 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 Route::group(['middleware' => ['auth']], function () {
-
     //Route for admin
     Route::get('/admin/home', function () {
         return view('admin/home');

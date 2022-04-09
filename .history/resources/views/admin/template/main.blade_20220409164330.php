@@ -25,7 +25,7 @@
                             <a class="nav-link active" aria-current="page" href="/admin/home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/admin/user_list">User List</a>
+                            <a class="nav-link active" aria-current="page" href="/admin/account">User List</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

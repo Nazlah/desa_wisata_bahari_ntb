@@ -10,22 +10,12 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function read()
     {
-        if (request()->user()->hasRole('admin')) {
-            $data = User::all();
-            return view('/admin/read')->with([
-                'data' => $data
-            ]);
-        } else {
-            return redirect('/user/home');
-        }
+        $data = User::all();
+        return view('/admin/read')->with([
+            'data' => $data
+        ]);
     }
 
     public function create()

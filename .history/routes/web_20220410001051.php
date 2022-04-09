@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,8 +26,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::group(['middleware' => ['auth']], function () {
-
+Route::group(['middleware' => request()->user()->hasRole('admin')], function () {
     //Route for admin
     Route::get('/admin/home', function () {
         return view('admin/home');

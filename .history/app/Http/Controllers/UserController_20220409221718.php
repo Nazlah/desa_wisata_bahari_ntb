@@ -10,22 +10,12 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function read()
     {
-        if (request()->user()->hasRole('admin')) {
-            $data = User::all();
-            return view('/admin/read')->with([
-                'data' => $data
-            ]);
-        } else {
-            return redirect('/user/home');
-        }
+        $data = User::all();
+        return view('/admin/read')->with([
+            'data' => $data
+        ]);
     }
 
     public function create()
@@ -38,11 +28,11 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        /* $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required'],
-        ]);
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ]); */
         $role = $request->role;
         $user = User::create([
             'name' => $request->name,
