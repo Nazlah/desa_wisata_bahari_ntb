@@ -1,5 +1,4 @@
 @extends('admin.template.main')
-
 @section('meta_token')
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
@@ -36,16 +35,16 @@
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script>
     $(document).ready(function() {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
         read()
     });
     // Read Database
     function read() {
         $.get("{{ url('/admin/read') }}", {}, function(data, status) {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
             $("#read").html(data);
         });
     }
@@ -65,7 +64,7 @@
         var role = $("#role:checked").val();
         debugger;
         $.ajax({
-            type: "post",
+            type: "get",
             url: "{{ url('/admin/store') }}",
             data: {
                 "name": name,
@@ -77,9 +76,6 @@
                 $(".btn-close").click();
                 read()
             },
-            /* error: function(xhr, status, error) {
-                alert("Error!" + xhr.status + " " + error);
-            }, */
         });
     }
 
@@ -97,7 +93,7 @@
         var role = $("#role:checked").val();
         debugger;
         $.ajax({
-            type: "post",
+            type: "get",
             url: "{{ url('/admin/update') }}/" + id,
             data: {
                 "name": name,

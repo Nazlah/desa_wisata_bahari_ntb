@@ -1,4 +1,4 @@
-<form action="javascript:void(0)" method="post" enctype="multipart/form-data">
+<form action="" method="post">
     @csrf
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Email</label>

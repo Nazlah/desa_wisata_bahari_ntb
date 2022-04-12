@@ -1,8 +1,6 @@
-<form action="javascript:void(0)" method="post" enctype="multipart/form-data">
-    @csrf
-    <div class="col-md-6">
-        <label for="inputEmail4" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" name="email" required autofocus>
+<form action="">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" required autofocus>
     </div>
 
     <div class="col-md-6">

@@ -77,9 +77,9 @@
                 $(".btn-close").click();
                 read()
             },
-            /* error: function(xhr, status, error) {
+            error: function(xhr, status, error) {
                 alert("Error!" + xhr.status + " " + error);
-            }, */
+            },
         });
     }
 
@@ -97,7 +97,7 @@
         var role = $("#role:checked").val();
         debugger;
         $.ajax({
-            type: "post",
+            type: "get",
             url: "{{ url('/admin/update') }}/" + id,
             data: {
                 "name": name,

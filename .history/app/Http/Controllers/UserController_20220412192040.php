@@ -99,11 +99,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         if (request()->user()->hasRole('Admin')) {
-            $request->validate([
-                'name' => ['required', 'string', 'max:255'],
-                'email' => ['required', 'string', 'email', 'max:255'],
-                'role' => ['required']
-            ]);
+
 
             $data = User::findOrFail($id);
             $data->name = $request->name;

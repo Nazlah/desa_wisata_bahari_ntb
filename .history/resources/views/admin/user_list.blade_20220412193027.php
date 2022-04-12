@@ -117,7 +117,7 @@
 
     function destroy(id) {
         $.ajax({
-            type: "get",
+            type: "post",
             url: "{{ url('/admin/destroy') }}/" + id,
             success: function(data) {
                 $(".btn-close").click();

@@ -65,7 +65,6 @@ class UserController extends Controller
                 'name' => ['required', 'string', 'max:255'],
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
                 'password' => ['required'],
-                'role' => ['required']
             ]);
             $role = $request->role;
             $user = User::create([
@@ -100,9 +99,9 @@ class UserController extends Controller
     {
         if (request()->user()->hasRole('Admin')) {
             $request->validate([
-                'name' => ['required', 'string', 'max:255'],
-                'email' => ['required', 'string', 'email', 'max:255'],
-                'role' => ['required']
+                'name' => ['required'],
+                'email' => ['required', 'unique:users'],
+
             ]);
 
             $data = User::findOrFail($id);

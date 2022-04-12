@@ -40,7 +40,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/create', [UserController::class, 'create']);
     Route::post('/admin/store', [UserController::class, 'store']);
     Route::get('/admin/show/{id}', [UserController::class, 'show']);
-    Route::post('/admin/update/{id}', [UserController::class, 'update']);
+    Route::get('/admin/update/{id}', [UserController::class, 'update']);
     Route::get('/admin/destroy/{id}', [UserController::class, 'destroy']);
     /* Route::get('/admin/edit/{id}', [UserController::class, 'show']); */
 

@@ -65,7 +65,6 @@ class UserController extends Controller
                 'name' => ['required', 'string', 'max:255'],
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
                 'password' => ['required'],
-                'role' => ['required']
             ]);
             $role = $request->role;
             $user = User::create([
@@ -102,7 +101,7 @@ class UserController extends Controller
             $request->validate([
                 'name' => ['required', 'string', 'max:255'],
                 'email' => ['required', 'string', 'email', 'max:255'],
-                'role' => ['required']
+
             ]);
 
             $data = User::findOrFail($id);
