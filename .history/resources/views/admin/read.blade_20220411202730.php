@@ -10,8 +10,8 @@
         <td>{{ $item->name }}</td>
         <td>
             @if($item->id == auth()->user()->id)
-            <button class="btn btn-warning" disabled>Edit</button>
-            <button class="btn btn-danger" disabled>Delete</button>
+            <button class="btn btn-warning" onClick="show('{{ $item->id }}')" disabled>Edit</button>
+            <button class="btn btn-danger" onClick="destroy('{{ $item->id }}')" disabled>Delete</button>
             @else
             <button class="btn btn-warning" onClick="show('{{ $item->id }}')">Edit</button>
             <button class="btn btn-danger" onClick="destroy('{{ $item->id }}')">Delete</button>
