@@ -57,5 +57,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/user/contentKind/destroy/{id}', [ContentKindController::class, 'destroy']);
 
     /* Content */
-    Route::get('/user/contentKind/{content_kind}', [ContentKindController::class, 'content']);
+    Route::get('/user/contentKind/content', [ContentKindController::class, 'content']);
 });

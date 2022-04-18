@@ -8,9 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class Content_kind extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'name_content_kind',
-        'detail_content_kind'
-    ];
 }

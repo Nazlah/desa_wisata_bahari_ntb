@@ -58,4 +58,5 @@ Route::group(['middleware' => ['auth']], function () {
 
     /* Content */
     Route::get('/user/contentKind/{content_kind}', [ContentKindController::class, 'content']);
+    Route::get('/user/contentKind/Home', [ContentKindController::class, 'content']);
 });

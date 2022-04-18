@@ -53,9 +53,4 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/user/contentKind/create', [ContentKindController::class, 'create']);
     Route::post('/user/contentKind/store', [ContentKindController::class, 'store']);
     Route::get('/user/contentKind/show/{id}', [ContentKindController::class, 'show']);
-    Route::post('/user/contentKind/update/{id}', [ContentKindController::class, 'update']);
-    Route::get('/user/contentKind/destroy/{id}', [ContentKindController::class, 'destroy']);
-
-    /* Content */
-    Route::get('/user/contentKind/{content_kind}', [ContentKindController::class, 'content']);
 });
