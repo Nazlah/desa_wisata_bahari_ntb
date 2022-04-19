@@ -40,7 +40,7 @@
     });
     // Read Database
     function read() {
-        $.get("{{ url('/user/contentKind/{data}/read') }}", {}, function(data, status) {
+        $.get("{{ url('/user/contentKind/read') }}", {}, function(data, status) {
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -51,7 +51,7 @@
     }
 
     function create() {
-        $.get("{{ url('/user/contentKind/{data}/create') }}", {}, function(data, status) {
+        $.get("{{ url('/user/contentKind/create') }}", {}, function(data, status) {
             $("#exampleModalLabel").html('Add User')
             $("#page").html(data);
             $("#exampleModal").modal('show');

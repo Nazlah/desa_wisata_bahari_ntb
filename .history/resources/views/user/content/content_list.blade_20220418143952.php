@@ -11,7 +11,7 @@
         <div class="col-lg-8">
             <h1>Content Kind {{$data}}</h1>
             <button class="btn btn-primary" onClick="create()">+ Add Content</button>
-            <div id="read" class="mt-3"></div>
+            <div id="" class="mt-3"></div>
         </div>
     </div>
 </div>
@@ -51,7 +51,7 @@
     }
 
     function create() {
-        $.get("{{ url('/user/contentKind/{data}/create') }}", {}, function(data, status) {
+        $.get("{{ url('/user/contentKind/create') }}", {}, function(data, status) {
             $("#exampleModalLabel").html('Add User')
             $("#page").html(data);
             $("#exampleModal").modal('show');

@@ -51,7 +51,7 @@
     }
 
     function create() {
-        $.get("{{ url('/user/contentKind/{data}/create') }}", {}, function(data, status) {
+        $.get("{{ url('/user/contentKind/create') }}", {}, function(data, status) {
             $("#exampleModalLabel").html('Add User')
             $("#page").html(data);
             $("#exampleModal").modal('show');
