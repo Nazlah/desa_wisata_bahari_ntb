@@ -36,7 +36,7 @@
    <!-- Navabr -->
    <nav id="navbar-main" class="navbar navbar-horizontal navbar-main navbar-expand-lg navbar-dark bg-primary">
      <div class="container">
-       <a class="navbar-brand" href="./pages/dashboards/dashboard.html">
+       <a class="navbar-brand" href="{{ url('/dashboard') }}">
          <img src="./assets/img/brand/white.png">
        </a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +46,7 @@
          <div class="navbar-collapse-header">
            <div class="row">
              <div class="col-6 collapse-brand">
-               <a href="./pages/dashboards/dashboard.html">
+               <a href="{{ url('/dashboard') }}">
                  <img src="./assets/img/brand/blue.png">
                </a>
              </div>
@@ -65,29 +65,8 @@
              </a>
            </li>
            <li class="nav-item">
-             <a href="./pages/examples/pricing.html" class="nav-link">
-               <span class="nav-link-inner--text">Pricing</span>
-             </a>
-           </li>
-           @if (Route::has('login'))
-           <li class="nav-item">
-           @auth
-            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-            @else
-             <a href="{{ route('login') }}" class="nav-link">
-               <span class="nav-link-inner--text">Login</span>
-             </a>
-             @endauth
-           </li>
-           @endif
-           <li class="nav-item">
-             <a href="./pages/examples/register.html" class="nav-link">
+             <a href="{{ route('register') }}" class="nav-link">
                <span class="nav-link-inner--text">Register</span>
-             </a>
-           </li>
-           <li class="nav-item">
-             <a href="./pages/examples/lock.html" class="nav-link">
-               <span class="nav-link-inner--text">Lock</span>
              </a>
            </li>
          </ul>
@@ -117,14 +96,18 @@
                <span class="nav-link-inner--text d-lg-none">Github</span>
              </a>
            </li>
-           <li class="nav-item d-none d-lg-block ml-lg-4">
-             <a href="https://www.creative-tim.com/product/argon-dashboard-pro" target="_blank" class="btn btn-neutral btn-icon">
-               <span class="btn-inner--icon">
-                 <i class="fas fa-shopping-cart mr-2"></i>
-               </span>
-               <span class="nav-link-inner--text">Purchase now</span>
+
+           @if (Route::has('login'))
+           <li class="nav-item">
+           @auth
+            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+            @else
+            <a href="{{ route('login') }}" target="_blank" class="btn btn-neutral btn-icon">
+               <span class="nav-link-inner--text">Login</span>
              </a>
+             @endauth
            </li>
+           @endif
          </ul>
        </div>
      </div>
