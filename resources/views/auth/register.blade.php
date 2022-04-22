@@ -56,7 +56,7 @@
               <div class="form-group mb-3">
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                      <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                     </div>
                     <input class="form-control" placeholder="Name" type="name" name="name" :value="old('name')" required autofocus >
                   </div>
