@@ -52,7 +52,7 @@
                     <small> {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}</small>
                 </div>
            
-              <form role="form" method="POST" action="{{ route('login') }}">
+              <form role="form" method="POST" action="{{ route('password.email') }}">
               @csrf
                 <div class="form-group mb-3">
                   <div class="input-group input-group-merge input-group-alternative">
