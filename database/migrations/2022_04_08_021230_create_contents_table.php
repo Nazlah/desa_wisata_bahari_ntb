@@ -16,14 +16,14 @@ return new class extends Migration
         Schema::create('contents', function (Blueprint $table) {
             $table->id();
             $table->string('name_content');
-            $table->string('url');
-            $table->text('content');
-            $table->string('thumbnail');
+            $table->string('url')->nullable();
+            $table->text('content')->nullable();
+            $table->string('thumbnail')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('content_kind_id');
             $table->timestamps();
 
-            $table->unique(['user_id', 'content_kind_id']);
+
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('content_kind_id')->references('id')->on('content_kinds')->onDelete('cascade');
         });

@@ -9,8 +9,8 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-lg-8">
-            <h1>Content Kind {{$data}}</h1>
-            <button class="btn btn-primary" onClick="create()">+ Add Content</button>
+            <h1>Content Kind / {{$data}}</h1>
+            <button class="btn btn-primary" onClick="create('{{$data}}','{{$id}}')">+ Add Content</button>
             <div id="read" class="mt-3"></div>
         </div>
     </div>
@@ -40,42 +40,55 @@
     });
     // Read Database
     function read() {
-        $.get("{{ url('/user/contentKind/{data}/read') }}", {}, function(data, status) {
+        var id = '{{$id}}';
+        $.get("{{ url('/user/contentKind/{data}/{id}/read') }}", {}, function(data, status) {
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
+                // ,data: {
+                //     "id":id
+                // }
             });
+            $.ajax({
+                data: {
+                    "id":id
+                }
+            })
             $("#read").html(data);
         });
     }
 
-    function create() {
-        $.get("{{ url('/user/contentKind/{data}/create') }}", {}, function(data, status) {
+    function create(contentKind,id) {
+        $.get("{{ url('/user/contentKind/create') }}/"+contentKind+"/"+id, {}, function(data, status) {
             $("#exampleModalLabel").html('Add User')
             $("#page").html(data);
             $("#exampleModal").modal('show');
         });
     }
 
-    function store() {
-        var name_content_kind = $("#name_content_kind").val();
-        var detail_content_kind = $("#detail_content_kind").val();
+    function store(contentKind,id,user_id) {
+        var name_content = $("#name_content").val();
+        var name_content_kind = contentKind;
+        var id = id;
+        var user_id = user_id;
         debugger;
         $.ajax({
             type: "post",
-            url: "{{ url('/user/contentKind/store') }}",
+            url: "{{ url('/user/contentKind/store') }}/"+contentKind+"/"+id,
             data: {
-                "name_content_kind": name_content_kind,
-                "detail_content_kind": detail_content_kind,
+                "name_content": name_content,
+                "id": id,
+                "user_id":user_id
             },
             success: function(data) {
                 $(".btn-close").click();
+                // alert(data);
                 read()
             },
-            /* error: function(xhr, status, error) {
+            error: function(xhr, status, error) {
                 alert("Error!" + xhr.status + " " + error);
-            }, */
+            },
         });
     }
 
