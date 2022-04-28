@@ -1,1 +1,0 @@
-<h1>tes detail</h1>

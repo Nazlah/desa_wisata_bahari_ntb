@@ -62,4 +62,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/user/contentKind/{content_kind}/{content_kind_id}/read', [ContentController::class, 'read']);
     Route::get('/user/contentKind/create/{content_kind}/{id}', [ContentController::class, 'create']);
     Route::post('/user/contentKind/store/{content_kind}/{id}', [ContentController::class, 'store']);
+    Route::get('/user/contentKind/show/{content_kind}/{id}', [ContentController::class, 'show']);
+    Route::get('/user/contentKind/destroy/{content_kind_id}/{id}', [ContentController::class, 'destroy']);
 });
