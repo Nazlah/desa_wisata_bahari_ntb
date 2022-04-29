@@ -74,26 +74,26 @@
         });
     }
 
-    function update(id) {
-        var name_content_kind = $("#name_content_kind").val();
-        var detail_content_kind = $("#detail_content_kind").val();
-        debugger;
-        $.ajax({
-            type: "post",
-            url: "{{ url('/user/contentKind/update') }}/" + id,
-            data: {
-                "name_content_kind": name_content_kind,
-                "detail_content_kind": detail_content_kind,
-            },
-            success: function(data) {
-                $(".btn-close").click();
-                read()
-            },
-            error: function(xhr, status, error) {
-                alert("Error!" + xhr.status + error);
-            },
-        });
-    }
+    // function update(id) {
+    //     var name_content_kind = $("#name_content_kind").val();
+    //     var detail_content_kind = $("#detail_content_kind").val();
+    //     debugger;
+    //     $.ajax({
+    //         type: "post",
+    //         url: "{{ url('/user/contentKind/update') }}/" + id,
+    //         data: {
+    //             "name_content_kind": name_content_kind,
+    //             "detail_content_kind": detail_content_kind,
+    //         },
+    //         success: function(data) {
+    //             $(".btn-close").click();
+    //             read()
+    //         },
+    //         error: function(xhr, status, error) {
+    //             alert("Error!" + xhr.status + error);
+    //         },
+    //     });
+    // }
 
     function destroy(contentKind_id, id) {
         // debugger;

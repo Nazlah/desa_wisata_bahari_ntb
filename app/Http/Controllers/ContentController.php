@@ -53,14 +53,14 @@ class ContentController extends Controller
     public function store(Request $request)
     {
         if (request()->user()->hasRole('User Content')) {
-            $name = time() . $request->file('thumbnail')->getClientOriginalName();
-            $path = $request->thumbnail->move(public_path('images'), $name);
+            $imageName = time() . '.' . $request->thumbnail->extension();
+            $request->thumbnail->move(public_path('images'), $imageName);
 
             $save = new Content;
             $save->content_kind_id = $request->content_kind_id;
             $save->user_id = $request->user_id;
             $save->name_content = $request->name_content;
-            $save->thumbnail = $path;
+            $save->thumbnail = $imageName;
             $save->content = $request->content;
             $save->url = $request->url;
 
@@ -77,6 +77,27 @@ class ContentController extends Controller
             return view('/user/content/edit')->with([
                 'data' => $data,
             ]);
+        } else {
+            return redirect('/admin/home');
+        }
+    }
+
+    public function update(Request $request, $name, $id)
+    {
+        if (request()->user()->hasRole('User Content')) {
+
+
+            $data = Content::findOrFail($id);
+            $data->name_content = $request->name_content;
+            $data->content = $request->content;
+            $data->url = $request->url;
+            if ($request->file('thumbnail')) {
+                $imageName = time() . '.' . $request->thumbnail->extension();
+                $request->thumbnail->move(public_path('images'), $imageName);
+
+                $data->$imageName;
+            }
+            $data->save();
         } else {
             return redirect('/admin/home');
         }

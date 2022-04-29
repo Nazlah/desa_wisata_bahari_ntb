@@ -6,8 +6,7 @@
             <label for="content" class="form-label">Name Content</label>
             <input type="text" class="form-control" id="name_content" name="name_content"
                 value="{{ $data->name_content }}">
-            <input type="text" class="form-control" id="content_kind_name" name="content_kind_name"
-                value="{{ $data }}" hidden>
+            <input type="text" class="form-control" id="id" name="id" value="{{ $data->id }}" hidden>
             <input type="text" class="form-control" id="content_kind_id" name="content_kind_id"
                 value="{{ $data->conten_kind_id }}" hidden>
             <input type="text" class="form-control" id="user_id" name="user_id" value="{{ $data->user_id }}" hidden>
@@ -38,8 +37,8 @@
             </div>
         </div>
         <div class="col-md-12 mb-2">
-            <img src="/public/images/1651044753d10eaceb-898f-442b-942e-6d95fbad1bfe.jpg"
-                id="preview-image-before-upload" alt="preview image" style="width: 250px; " class="form-control">
+            <img src="\images\{{ $data->thumbnail }}" id="preview-image-before-upload" alt="preview image"
+                style="width: 250px; " class="form-control">
         </div>
         <div class="col-md-12">
             <button type="submit" class="btn btn-primary" id="submit">Submit</button>
@@ -71,12 +70,12 @@
         $('#image-upload').submit(function(e) {
             e.preventDefault();
             var formData = new FormData(this);
-            var name_content = $("#content_kind_name").val();
-            var id_content = $("#content_kind_id").val();
+            var name_content = $("#name_content").val();
+            var id_content = $("#id").val();
             debugger;
             $.ajax({
                 type: 'POST',
-                url: "{{ url('/user/contentKind/store') }}/" + name_content + "/" +
+                url: "{{ url('/user/contentKind/update') }}/" + name_content + "/" +
                     id_content,
                 data: formData,
                 cache: false,
