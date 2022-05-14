@@ -25,7 +25,7 @@ class ContentController extends Controller
         if (request()->user()->hasRole('User Content')) {
             //$id = $request->id;
             //dd($id);
-            $data = Content::where('content_kind_id', '=', 2)->get();
+            $data = Content::where('content_kind_id', '=', $id)->get();
             //$data = DB::table('contents')->where('content_kind_id', '=', 100)->get();
 
             return view('/user/content/read')->with([

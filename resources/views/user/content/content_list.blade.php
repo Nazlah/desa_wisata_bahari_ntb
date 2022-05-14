@@ -39,21 +39,14 @@
     });
     // Read Database
     function read() {
-        var id = '{{ $id }}';
-        $.get("{{ url('/user/contentKind/{data}/"+id+"/read') }}", {}, function(data, status) {
+        var id = {{ $id }};
+        debugger;
+        $.get("{{ url('/user/contentKind/read/{data}') }}/" + id, {}, function(data, status) {
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
-                // ,data: {
-                //     "id":id
-                // }
             });
-            $.ajax({
-                data: {
-                    "id": id
-                }
-            })
             $("#read").html(data);
         });
     }
@@ -73,27 +66,6 @@
             $("#exampleModal").modal('show');
         });
     }
-
-    // function update(id) {
-    //     var name_content_kind = $("#name_content_kind").val();
-    //     var detail_content_kind = $("#detail_content_kind").val();
-    //     debugger;
-    //     $.ajax({
-    //         type: "post",
-    //         url: "{{ url('/user/contentKind/update') }}/" + id,
-    //         data: {
-    //             "name_content_kind": name_content_kind,
-    //             "detail_content_kind": detail_content_kind,
-    //         },
-    //         success: function(data) {
-    //             $(".btn-close").click();
-    //             read()
-    //         },
-    //         error: function(xhr, status, error) {
-    //             alert("Error!" + xhr.status + error);
-    //         },
-    //     });
-    // }
 
     function destroy(contentKind_id, id) {
         // debugger;

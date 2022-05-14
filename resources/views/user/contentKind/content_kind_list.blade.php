@@ -1,36 +1,33 @@
 @extends('user.template.main')
 
 @section('meta_token')
-<meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 
 @section('container')
-
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-8">
-            <h1>Content Kind</h1>
-            <button class="btn btn-primary" onClick="create()">+ Add Content Kind</button>
-            <div id="read" class="mt-3"></div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div id="page" class="p-2"></div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>Content Kind</h1>
+                <button class="btn btn-primary" onClick="create()">+ Add Content Kind</button>
+                <div id="read" class="mt-3"></div>
             </div>
         </div>
     </div>
-</div>
 
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="page" class="p-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -108,14 +105,17 @@
         });
     }
 
-    function destroy(id) {
-        $.ajax({
-            type: "get",
-            url: "{{ url('/user/contentKind/destroy') }}/" + id,
-            success: function(data) {
-                $(".btn-close").click();
-                read()
-            }
-        });
+    function destroy(name_content, id) {
+        var result = confirm("Want to delete? The all content in " + name_content + " want be delete.");
+        if (result) {
+            $.ajax({
+                type: "get",
+                url: "{{ url('/user/contentKind/destroy') }}/" + id,
+                success: function(data) {
+                    $(".btn-close").click();
+                    read()
+                }
+            });
+        }
     }
 </script>
