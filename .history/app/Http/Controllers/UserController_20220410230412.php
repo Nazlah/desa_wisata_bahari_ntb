@@ -105,7 +105,7 @@ class UserController extends Controller
             $data->save();
 
             $role = $request->role;
-            var_dump($role , $id)
+            var_dump($role , $id);
             $data->roles()->sync([2, 2]);
         } else {
             return redirect('/user/home');

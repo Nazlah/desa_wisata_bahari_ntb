@@ -37,7 +37,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::controller(UserController::class)->group(function () {
         Route::get('/orders/{id}', 'show');
         Route::post('/orders', 'store');
-        Route::get('/admin/edit_profile/update/{id}', 'update';
+        Route::get('/admin/edit_profile/update/{id}', 'update');
     });
     Route::get('/admin/edit_profile/update/{id}', [UserController::class, 'update']);
 

@@ -87,8 +87,8 @@ class UserController extends Controller
             $role = request()->user()->hasRole();
             return view('/admin/edit')->with([
                 'data' => $data,
-                'data_role' => $data_role
-                'role' => $role
+                'data_role' => $data_role,
+                'role' => $role,
             ]);
         } else {
             return redirect('/user/home');

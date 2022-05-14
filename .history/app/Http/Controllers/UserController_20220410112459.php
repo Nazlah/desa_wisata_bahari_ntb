@@ -18,7 +18,7 @@ class UserController extends Controller
 
     public function list()
     {
-        return view('/admin/user_list')
+        return view('/admin/user_list');
     }
 
     public function read()
