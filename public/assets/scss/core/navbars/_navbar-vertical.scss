@@ -2,6 +2,7 @@
 // Vertical navbar + Sidenav
 //
 
+
 .navbar-vertical {
     padding-top: 0;
     border-width: 0 0 1px 0;
@@ -17,12 +18,14 @@
         border-color: $navbar-light-border-color;
     }
 
+
     // Navbar dark
 
     &.navbar-dark {
         background-color: $navbar-dark-bg;
         border-color: $navbar-dark-border-color;
     }
+
 
     // Navbar brand
 
@@ -36,6 +39,7 @@
         max-height: 2rem;
     }
 
+
     // Navbar collapse
 
     @include media-breakpoint-up(md) {
@@ -44,18 +48,20 @@
             margin-right: -$navbar-padding-x;
 
             &:before {
-                content: "";
+                content: '';
                 display: block;
                 margin: $navbar-padding-y / 2;
             }
         }
     }
 
+
     // Navbar navigaton
 
     .navbar-nav {
         margin-left: -$navbar-padding-x;
         margin-right: -$navbar-padding-x;
+
 
         // Navbar link
 
@@ -67,15 +73,18 @@
 
             &.active {
                 position: relative;
+
             }
+
 
             // Icon
 
             > i {
                 min-width: $navbar-icon-min-width;
-                font-size: 0.9375rem;
+                font-size: .9375rem;
                 line-height: ($font-size-base * $line-height-base);
             }
+
 
             // Dropdown
 
@@ -90,10 +99,11 @@
 
         .nav-sm {
             .nav-link {
-                font-size: 0.8125rem;
+                font-size: .8125rem;
             }
         }
     }
+
 
     // Navbar navigation
 
@@ -109,7 +119,7 @@
             font-variant: normal;
             text-rendering: auto;
             -webkit-font-smoothing: antialiased;
-            font-family: "Font Awesome 5 Free";
+            font-family: 'Font Awesome 5 Free';
             font-weight: 700;
             content: "\f105";
             margin-left: auto;
@@ -136,14 +146,16 @@
         padding-left: $navbar-padding-x * 1.5 + $navbar-icon-min-width;
     }
 
+
     // Navbar heading
     .navbar-heading {
         padding-top: $nav-link-padding-y;
         padding-bottom: $nav-link-padding-y;
         font-size: $font-size-xs;
         text-transform: uppercase;
-        letter-spacing: 0.04em;
+        letter-spacing: .04em;
     }
+
 
     // Expanded navbar specific styles
 
@@ -167,18 +179,18 @@
                     }
 
                     // Container
-                    > [class*="container"] {
+                    >[class*="container"] {
                         flex-direction: column;
                         align-items: stretch;
                         min-height: 100%;
                         padding-left: 0;
                         padding-right: 0; // Target IE 10 & 11
-                        @media all and (-ms-high-contrast: none),
-                            (-ms-high-contrast: active) {
+                        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
                             min-height: none;
                             height: 100%;
                         }
                     }
+
 
                     // Fixes the vertical navbar to the left
                     &.fixed-left {
@@ -186,11 +198,13 @@
                         border-width: 0 1px 0 0;
                     }
 
+
                     // Fixed the vertical navbar to the right
                     &.fixed-right {
                         right: 0;
                         border-width: 0 0 0 1px;
                     }
+
 
                     // Navbar collapse
                     .navbar-collapse {
@@ -208,6 +222,7 @@
                         }
                     }
 
+
                     // Navbar navigation
 
                     .navbar-nav {
@@ -217,8 +232,7 @@
                     }
 
                     .navbar-nav .nav-link {
-                        padding: $navbar-vertical-nav-link-padding-y
-                            $navbar-vertical-nav-link-padding-x;
+                        padding: $navbar-vertical-nav-link-padding-y $navbar-vertical-nav-link-padding-x;
                     }
 
                     .navbar-nav > .nav-item {
@@ -227,8 +241,8 @@
                         > .nav-link {
                             &.active {
                                 background: $gray-100;
-                                margin-right: 0.5rem;
-                                margin-left: 0.5rem;
+                                margin-right: .5rem;
+                                margin-left: .5rem;
                                 padding-left: 1rem;
                                 padding-right: 1rem;
                                 border-radius: $border-radius;
@@ -240,8 +254,8 @@
                         width: calc(100% - 1rem) !important;
                         background: theme-color("primary");
                         color: color-yiq($primary);
-                        margin-right: 0.5rem;
-                        margin-left: 0.5rem;
+                        margin-right: .5rem;
+                        margin-left: .5rem;
                         padding-left: 1rem;
                         padding-right: 1rem;
                         border-radius: $border-radius;
@@ -250,22 +264,21 @@
                     // Second level
                     .navbar-nav .nav .nav-link {
                         padding-top: $navbar-vertical-nav-link-padding-y / 1.5;
-                        padding-bottom: $navbar-vertical-nav-link-padding-y /
-                            1.5;
-                        padding-left: $navbar-vertical-padding-x +
-                            $navbar-icon-min-width;
+                        padding-bottom: $navbar-vertical-nav-link-padding-y / 1.5;
+                        padding-left: $navbar-vertical-padding-x + $navbar-icon-min-width;
                     }
+
 
                     // Third level
                     .navbar-nav .nav .nav .nav-link {
-                        padding-left: $navbar-vertical-padding-x * 1.5 +
-                            $navbar-icon-min-width;
+                        padding-left: $navbar-vertical-padding-x * 1.5 + $navbar-icon-min-width;
                     }
                 }
             }
         }
     }
 }
+
 
 // Offsets the main content depending on the sidebar positioning
 
@@ -308,6 +321,7 @@
     }
 }
 
+
 //
 // Sidenav
 //
@@ -336,6 +350,7 @@
 .sidenav-header {
     height: 78px;
 }
+
 
 // Sidenav states
 
@@ -369,7 +384,7 @@
         .navbar-nav > .nav-item {
             > .nav-link {
                 &:after {
-                    content: "";
+                    content: '';
                 }
             }
         }
@@ -389,11 +404,11 @@
         .navbar-nav > .nav-item {
             > .nav-link {
                 &:after {
-                    content: "";
+                    content: '';
                 }
             }
         }
-
+        
         .nav-item .collapse {
             display: none !important;
         }
@@ -403,6 +418,7 @@
         }
     }
 }
+
 
 // Media fixes for iPhone 5 like resolutions
 
@@ -434,7 +450,7 @@
     position: relative;
 
     &:before {
-        content: "";
+        content: '';
         position: absolute;
         width: 40px;
         height: 40px;

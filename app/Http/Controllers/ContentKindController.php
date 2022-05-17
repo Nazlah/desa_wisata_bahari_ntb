@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Content_kind;
+use App\Models\Content;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class ContentKindController extends Controller
 {
@@ -15,7 +18,14 @@ class ContentKindController extends Controller
     public function home()
     {
         if (request()->user()->hasRole('User Content')) {
-            return view('/user/home');
+            $id = Auth::id();
+            $data = Content_kind::where('user_id', $id)->count();
+            $data1 = Content::where('user_id', $id)->count();
+
+            return view('/user/home')->with([
+                'data' => $data,
+                'data1' => $data1
+            ]);
         } else {
             return redirect('/admin/home');
         }
@@ -32,7 +42,16 @@ class ContentKindController extends Controller
     public function read()
     {
         if (request()->user()->hasRole('User Content')) {
-            $data = Content_kind::all();
+
+
+            // $content_kind = DB::table('contents')
+            //     ->join('users', 2, '=', 'users.user_id')
+            //     ->join('content_kind', 'contents.user_id', '=', 'content_kinds.id')
+            //     ->select('users.*', 'contacts.phone', 'orders.price')
+            //     ->get();
+            $id = Auth::id();
+            $data = Content_kind::where('user_id', $id)->get();
+            // dd($data);
             return view('/user/contentKind/read')->with([
                 'data' => $data
             ]);
@@ -71,9 +90,10 @@ class ContentKindController extends Controller
             Content_kind::create([
                 'name_content_kind' => $request->name_content_kind,
                 'detail_content_kind' => $request->detail_content_kind,
+                'user_id' => $request->user_id
             ]);
         } else {
-            return redirect('/admin/home');
+            return redirect('/admin/home')->with('alert', 'updated');
         }
     }
 
