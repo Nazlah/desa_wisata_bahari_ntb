@@ -1,53 +1,65 @@
-<form method="POST" enctype="multipart/form-data" id="image-upload" action="javascript:void(0)">
-    @csrf
-    <div class="row">
-        <h1>Add Content</h1>
-        <div class="col-md-6">
-            <label for="content" class="form-label">Name Content</label>
-            <input type="text" class="form-control" id="name_content" name="name_content" required autofocus>
-            <input type="text" class="form-control" id="content_kind_name" name="content_kind_name"
-                value="{{ $data }}" hidden>
-            <input type="text" class="form-control" id="content_kind_id" name="content_kind_id"
-                value="{{ $id }}" hidden>
-            <input type="text" class="form-control" id="user_id" name="user_id" value="{{ auth()->user()->id }}"
-                hidden>
+<div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLongTitle">Form Input Content Kind</h5>
+    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form method="POST" enctype="multipart/form-data" id="image-upload" action="javascript:void(0)">
+        @csrf
+        <div class="row">
+            <div class="col-md-6">
+                <label for="content" class="form-label">Name Content</label>
+                <input type="text" class="form-control" id="name_content" name="name_content" required autofocus>
+                <input type="text" class="form-control" id="content_kind_name" name="content_kind_name"
+                    value="{{ $data }}" hidden>
+                <input type="text" class="form-control" id="content_kind_id" name="content_kind_id"
+                    value="{{ $id }}" hidden>
+                <input type="text" class="form-control" id="user_id" name="user_id" value="{{ auth()->user()->id }}"
+                    hidden>
 
-        </div>
+            </div>
 
-        <div class="col-md-6">
-            <label for="url" class="form-label">URL</label>
-            <input type="text" class="form-control" id="url" name="url" required>
-        </div>
+            <div class="col-md-6">
+                <label for="url" class="form-label">URL</label>
+                <input type="text" class="form-control" id="url" name="url" required>
+            </div>
 
-        {{-- <div class="mb-3">
+            {{-- <div class="mb-3">
             <label for="content" class="form-label">Content</label>
             <textarea class="form-control" id="content" name="content" rows="3"></textarea>
         </div> --}}
-        <div class="col-md-12 mb-2">
-            <div class="form-group">
-                <label> Content </label>
-                <textarea class="form-control" id="content" placeholder="Enter the Description" name="content" rows="3"></textarea>
+            <div class="col-md-12 mb-2 mt-5">
+                <input name="content" type="hidden">
+                <div class="form-group">
+                    {{-- <label> Content </label>
+                    <textarea class="form-control" id="content" placeholder="Enter the Description" name="content" rows="3"></textarea> --}}
+                    {{-- <div id="editor"></div> --}}
+                    <textarea></textarea>
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-12 mb-2">
-            <div class="form-group">
-                <input type="file" name="thumbnail" placeholder="Choose image" id="thumbnail" class="form-control">
+            <div class="col-md-12 mb-2">
+                <div class="form-group">
+                    <input type="file" name="thumbnail" placeholder="Choose image" id="thumbnail"
+                        class="form-control">
+                </div>
+            </div>
+            <div class="col-md-12 mb-2">
+                <img id="preview-image-before-upload" alt="preview image" style="width: 250px; " class="form-control">
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
             </div>
         </div>
-        <div class="col-md-12 mb-2">
-            <img id="preview-image-before-upload" alt="preview image" style="width: 250px; " class="form-control">
-        </div>
-        <div class="col-md-12">
-            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
-        </div>
-    </div>
-</form>
-<script>
+    </form>
+</div>
+
+{{-- <script>
     ClassicEditor.create(document.querySelector('#content')).catch(error => {
         console.error(error);
     });
-</script>
+</script> --}}
 
 
 

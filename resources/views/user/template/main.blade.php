@@ -36,6 +36,7 @@
     </div>
     <!-- Argon Scripts -->
     <!-- Core -->
+
     <script src="../../../assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="../../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../../assets/vendor/js-cookie/js.cookie.js"></script>
@@ -52,6 +53,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
+    <script>
+        // get a new date (locale machine date time)
+        var date = new Date();
+        // get the date as a string
+        var n = date.toDateString();
+        // get the time as a string
+        var time = date.toLocaleTimeString();
+
+        // find the html element with the id of time
+        // set the innerHTML of that element to the date a space the time
+        document.getElementById('time').innerHTML = n + ' ' + time;
+    </script>
+
+    @yield('script')
+
 </body>
 
 </html>

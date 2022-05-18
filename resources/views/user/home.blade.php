@@ -1,5 +1,15 @@
 @extends('user.template.main')
 
+@section('route')
+    <h6 class="h2 text-white d-inline-block mb-0">Dashboards</h6>
+    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+            <li class="breadcrumb-item"><a href="/user/home"><i class="fas fa-home"></i></a></li>
+            <li class="breadcrumb-item"><a href="/user/home">Dashboards</a></li>
+        </ol>
+    </nav>
+@endsection
+
 @section('card-body1')
     <div class="col-xl-3 col-md-6">
         <div class="card card-stats">
