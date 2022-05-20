@@ -52,12 +52,16 @@
             <div class="col">
                 <div class="card bg-default shadow">
                     <div class="col-lg-12">
-                        <h1 class="text-white mt-2">Content Kind</h1>
-                        <button class="btn btn-primary d-inline"
-                            onClick="create('{{ $data }}','{{ $id }}')">+ Add
-                            Content</button>
-                        <hr class="my-3">
-                        <div id="read" class="mt-3"></div>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <h1 class="text-white mt-2 d-inline">Content</h1>
+                                <button class="ml-4 align-items-center btn btn-primary d-inline"
+                                    onClick="create('{{ $data }}','{{ $id }}')">+ Add
+                                    Content</button>
+                                <hr class="my-3">
+                                <div id="read" class="mt-3"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,9 +80,11 @@
 
 @section('script')
     {{-- <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script> --}}
-    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'>
-    </script>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    {{-- <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'>
+    </script> --}}
+    {{-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> --}}
+    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/balloon-block/ckeditor.js"></script> --}}
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -87,7 +93,7 @@
         // Read Database
         function read() {
             var id = {{ $id }};
-            debugger;
+            // debugger;
             $.get("{{ url('/user/contentKind/read/{data}') }}/" + id, {}, function(data, status) {
                 $.ajaxSetup({
                     headers: {
@@ -103,7 +109,7 @@
                 $("#exampleModalLabel").html('Add User')
                 $("#page").html(data);
                 $("#exampleModal").modal('show');
-                var editor = new FroalaEditor('textarea');
+                // var editor = new FroalaEditor('textarea');
                 // var toolbarOptions = [
                 //     ['bold', 'italic', 'underline', 'strike'], // toggled buttons
                 //     ['blockquote', 'code-block', 'image'],
@@ -161,7 +167,26 @@
                     url: "{{ url('/user/contentKind/destroy') }}/" + contentKind_id + "/" + id,
                     success: function(data) {
                         $(".btn-close").click();
-                        read()
+                        read();
+                        Command: toastr["error"]("Content Success Deleted !", "Delete Content")
+
+                        toastr.options = {
+                            "closeButton": false,
+                            "debug": false,
+                            "newestOnTop": false,
+                            "progressBar": false,
+                            "positionClass": "toast-top-right",
+                            "preventDuplicates": false,
+                            "onclick": null,
+                            "showDuration": "300",
+                            "hideDuration": "1000",
+                            "timeOut": "5000",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                        }
                     }
                 });
             }

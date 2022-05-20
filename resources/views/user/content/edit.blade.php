@@ -1,46 +1,62 @@
-<form method="POST" enctype="multipart/form-data" id="image-upload" action="javascript:void(0)">
-    @csrf
-    <div class="row">
-        <h1>Add Content</h1>
-        <div class="col-md-6">
-            <label for="content" class="form-label">Name Content</label>
-            <input type="text" class="form-control" id="name_content" name="name_content"
-                value="{{ $data->name_content }}">
-            <input type="text" class="form-control" id="id" name="id" value="{{ $data->id }}" hidden>
-            <input type="text" class="form-control" id="content_kind_id" name="content_kind_id"
-                value="{{ $data->conten_kind_id }}" hidden>
-            <input type="text" class="form-control" id="user_id" name="user_id" value="{{ $data->user_id }}" hidden>
+<div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLongTitle">Form Edit Content Kind</h5>
+    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form method="POST" enctype="multipart/form-data" id="image-upload" action="javascript:void(0)">
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <label for="content" class="form-label">Name Content</label>
+                <input type="text" class="form-control" id="name_content" name="name_content"
+                    value="{{ $data->name_content }}">
+                <input type="text" class="form-control" id="id" name="id" value="{{ $data->id }}" hidden>
+                <input type="text" class="form-control" id="content_kind_id" name="content_kind_id"
+                    value="{{ $data->conten_kind_id }}" hidden>
+                <input type="text" class="form-control" id="user_id" name="user_id" value="{{ $data->user_id }}"
+                    hidden>
+            </div>
 
-        </div>
-
-        <div class="col-md-6">
-            <label for="url" class="form-label">URL</label>
-            <input type="text" class="form-control" id="url" name="url" required value="{{ $data->url }}">
-        </div>
-
-        <div class="col-md-12 mb-2">
-            <div class="form-group">
-                <label> Content </label>
-                <textarea class="form-control" id="content" placeholder="Enter the Description" name="content"
-                    rows="3">{{ $data->content }}</textarea>
+            <div class="col-md-6 form-group">
+                <label for="url" class="form-label">URL</label>
+                <input type="text" class="form-control" id="url" name="url" required value="{{ $data->url }}">
             </div>
         </div>
 
-        <div class="col-md-12 mb-2">
-            <div class="form-group">
-                <input type="file" name="thumbnail" placeholder="Choose image" id="thumbnail" class="form-control"
-                    url>
+        <div class="row">
+            <div class="col-md form-group">
+                <div class="form-group">
+                    <label> Content </label>
+                    <textarea class="form-control" id="content" placeholder="Enter the Description"
+                        name="content">{{ $data->content }}</textarea>
+                </div>
             </div>
         </div>
-        <div class="col-md-12 mb-2">
-            <img src="\images\{{ $data->thumbnail }}" id="preview-image-before-upload" alt="preview image"
-                style="width: 250px; " class="form-control">
+
+        <div class="row">
+            <div class="col-md form-group mt-2">
+                <div class="form-group">
+                    <input type="file" name="thumbnail" placeholder="Choose image" id="thumbnail" class="form-control"
+                        url>
+                </div>
+            </div>
         </div>
-        <div class="col-md-12">
-            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+
+        <div class="row">
+            <div class="col-md form-group mt-2">
+                <img src="\images\{{ $data->thumbnail }}" id="preview-image-before-upload" alt="preview image"
+                    style="width: 220px; height: 260px;" class="form-control">
+            </div>
         </div>
-    </div>
-</form>
+
+        <div class="row">
+            <div class="col-md form-group mt-2">
+                <button type="submit" class="btn btn-success" id="submit">Update</button>
+            </div>
+        </div>
+    </form>
+</div>
 <script>
     ClassicEditor.create(document.querySelector('#content')).catch(error => {
         console.error(error);
@@ -79,10 +95,30 @@
                 processData: false,
                 success: (data) => {
                     this.reset();
-                    alert('Data Tersimpan');
-                    $(".btn-close").click();
+                    // alert('Data Tersimpan');
+                    $(".close").click();
                     // alert(data);
-                    read()
+                    read();
+                    Command: toastr["success"]("Conten Kind Success Edited !",
+                        "Edit Content Kind")
+
+                    toastr.options = {
+                        "closeButton": false,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": false,
+                        "positionClass": "toast-top-right",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    }
                 },
                 error: function(data) {
                     console.log(data);

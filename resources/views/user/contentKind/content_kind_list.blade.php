@@ -128,7 +128,7 @@
                 success: function(data) {
                     $(".close").click();
                     read();
-                    Command: toastr["success"]("Conten Kind Success Added !", "Add Content Kind")
+                    Command: toastr["success"]("Content Kind Success Added !", "Add Content Kind")
 
                     toastr.options = {
                         "closeButton": false,
@@ -177,7 +177,7 @@
                 success: function(data) {
                     $(".close").click();
                     read();
-                    Command: toastr["success"]("Conten Kind Success Edited !", "Edit Content Kind")
+                    Command: toastr["success"]("Content Kind Success Edited !", "Edit Content Kind")
 
                     toastr.options = {
                         "closeButton": false,
@@ -199,7 +199,7 @@
                 },
                 error: function(xhr, status, error) {
                     alert("Error!" + xhr.status + error);
-                    Command: toastr["error"]("Conten Kind Fail Edited !", "Edit Content Kind")
+                    Command: toastr["error"]("Content Kind Fail Edited !", "Edit Content Kind")
 
                     toastr.options = {
                         "closeButton": false,
@@ -232,7 +232,7 @@
                     success: function(data) {
                         $(".btn-close").click();
                         read();
-                        Command: toastr["success"]("Conten Kind Success Deleted!", "Delete Content Kind")
+                        Command: toastr["error"]("Content Kind Success Deleted !", "Delete Content Kind")
 
                         toastr.options = {
                             "closeButton": false,

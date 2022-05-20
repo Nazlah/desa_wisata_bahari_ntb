@@ -95,7 +95,7 @@ class ContentController extends Controller
                 $imageName = time() . '.' . $request->thumbnail->extension();
                 $request->thumbnail->move(public_path('images'), $imageName);
 
-                $data->$imageName;
+                $data->thumbnail = $imageName;
             }
             $data->save();
         } else {
