@@ -1,18 +1,50 @@
 @extends('admin.template.main')
 
+  
+
 @section('meta_token')
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 
 @section('container')
-
+<div class="header bg-primary pb-6" style="height: 40%; margin-bottom: -14%;"></div>
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-8">
-            <h1>USER LIST</h1>
-            <button class="btn btn-primary" onClick="create()">+ Add User</button>
-            <div id="read" class="mt-3"></div>
+    <div class="row align-items-center py-4">
+        
+<div class="container-fluid mt--6">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="card">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h3 class="mb-0">User List</h3>
+                </div>
+                <div class="col text-right">
+                  <a href="#!" class="btn btn-sm btn-primary" onclick="create()"> + Add User</a>
+                </div>
+              </div>
+            </div>
+            <div id="read" class="table-responsive">
+              <!-- Projects table -->
+              <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Email</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 
+                  </tbody>
+              </table>
+            </div>
+          </div>
         </div>
+       </div>
+
+<!--  -->
     </div>
 </div>
 
@@ -29,7 +61,6 @@
         </div>
     </div>
 </div>
-
 
 @endsection
 
