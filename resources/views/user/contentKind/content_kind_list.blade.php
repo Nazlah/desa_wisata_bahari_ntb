@@ -2,6 +2,7 @@
 
 @section('meta_token')
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{-- <link rel="stylesheet" href="//cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css"> --}}
 @endsection
 
 @section('route')
@@ -86,6 +87,7 @@
 @section('script')
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="//cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function() {
             read();
@@ -93,7 +95,7 @@
         // Read Database
         function read() {
             var id = {{ auth()->user()->id }};
-            debugger;
+            // debugger;
             $.get("{{ url('/user/contentKind/read') }}", {}, function(data, status) {
                 $.ajaxSetup({
                     headers: {

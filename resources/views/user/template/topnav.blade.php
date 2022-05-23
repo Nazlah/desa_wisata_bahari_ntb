@@ -114,6 +114,17 @@
             </form>
             @auth
                 <ul class="navbar-nav align-items-center ml-md-auto">
+                    <li class="nav-item d-xl-none">
+                        <!-- Sidenav toggler -->
+                        <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin"
+                            data-target="#sidenav-main">
+                            <div class="sidenav-toggler-inner">
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                            </div>
+                        </div>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
@@ -141,7 +152,7 @@
                             </a> --}}
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
-                                                                                                                                                                                                                document.getElementById('logout-form').submit();">
+                                                                                                                                                                                                                    document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }} <i class="ni ni-user-run"></i>
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
