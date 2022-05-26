@@ -1,10 +1,10 @@
 <form action="javascript:void(0)" method="post" enctype="multipart/form-data">
-    @csrf<div class="col-md-6">
+    @csrf<div class="col-md-12">
         <label for="inputEmail4" class="form-label">Email</label>
         <input type="email" class="form-control" id="email" name="email" required autofocus value="{{$data->email}}">
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-12">
         <label for="inputName" class="form-label">Name</label>
         <input type="text" class="form-control" id="name" name="name" required value="{{$data->name}}">
     </div>
@@ -15,6 +15,7 @@
         <input id="password" class="form-control" type="password" name="password" required autocomplete="new-password">
     </div> -->
 
+<div class="row-md-6" style="margin-top: 2rem;">
     <h5>Select Role</h5>
     @foreach ($data_role as $item)
 
@@ -34,8 +35,8 @@
     </div>
     @endif
     @endforeach
-
-    <div class="form-group mt-2">
-        <button class="btn btn-success" onClick="update('{{$data->id}}')">Add</button>
+</div>
+    <div class="form-group mt-2 text-right">
+        <button class="btn btn-success" onClick="update('{{$data->id}}')">Save</button>
     </div>
 </form>
