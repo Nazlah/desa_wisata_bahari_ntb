@@ -22,7 +22,7 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/user/home">
+                        <a class="nav-link" href="/admin/home">
                             <i class="ni ni-shop text-primary"></i>
                             <span class="nav-link-text">Dashoards</span>
                         </a>
@@ -34,7 +34,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/user_list">
+                        <a class="nav-link" href="/admin/user_list"">
                             <i class="ni ni-collection text-pink"></i>
                             <span class="nav-link-text">User List</span>
                         </a>
