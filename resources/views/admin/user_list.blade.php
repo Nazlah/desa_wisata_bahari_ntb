@@ -143,11 +143,13 @@
             },
             success: function(data) {
                 $(".btn-close").click();
-                read()
+                $("#exampleModal").modal('hide');
+                read();
+                Command: toastr["error"]("Success Edit User !", "Edit User")
             },
-            error: function(xhr, status, error) {
-                alert("Error!" + xhr.status + error);
-            },
+            // error: function(xhr, status, error) {
+            //     alert("Error!" + xhr.status + error);
+            // },
         });
     }
 
@@ -159,7 +161,6 @@
                 url: "{{ url('/admin/destroy') }}/" + id,
                 success: function(data) {
                     $(".btn-close").click();
-                    $("#exampleModal").modal('hide');
                     read();
                     Command: toastr["error"]("User Success Deleted !", "Delete User")
                 },

@@ -8,7 +8,7 @@
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Argon Dashboard PRO - Premium Bootstrap 4 Admin Template</title>
+    <title>Desa Wisata</title>
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <!-- Favicon -->
