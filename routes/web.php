@@ -66,3 +66,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/user/contentKind/update/{content_kind_id}/{id}', [ContentController::class, 'update']);
     Route::get('/user/contentKind/destroy/{content_kind_id}/{id}', [ContentController::class, 'destroy']);
 });
+
+Route::get('/tes', function () {
+    return view('editor');
+});

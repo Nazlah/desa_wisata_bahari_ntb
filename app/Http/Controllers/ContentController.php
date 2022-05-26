@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Content;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ContentController extends Controller
 {
@@ -95,7 +96,7 @@ class ContentController extends Controller
                 $imageName = time() . '.' . $request->thumbnail->extension();
                 $request->thumbnail->move(public_path('images'), $imageName);
 
-                $data->$imageName;
+                $data->thumbnail = $imageName;
             }
             $data->save();
         } else {

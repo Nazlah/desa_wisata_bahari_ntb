@@ -2,6 +2,7 @@
 
 @section('meta_token')
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{-- <link rel="stylesheet" href="//cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css"> --}}
 @endsection
 
 @section('route')
@@ -86,6 +87,7 @@
 @section('script')
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="//cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function() {
             read();
@@ -93,7 +95,7 @@
         // Read Database
         function read() {
             var id = {{ auth()->user()->id }};
-            debugger;
+            // debugger;
             $.get("{{ url('/user/contentKind/read') }}", {}, function(data, status) {
                 $.ajaxSetup({
                     headers: {
@@ -128,7 +130,7 @@
                 success: function(data) {
                     $(".close").click();
                     read();
-                    Command: toastr["success"]("Conten Kind Success Added !", "Add Content Kind")
+                    Command: toastr["success"]("Content Kind Success Added !", "Add Content Kind")
 
                     toastr.options = {
                         "closeButton": false,
@@ -177,7 +179,7 @@
                 success: function(data) {
                     $(".close").click();
                     read();
-                    Command: toastr["success"]("Conten Kind Success Edited !", "Edit Content Kind")
+                    Command: toastr["success"]("Content Kind Success Edited !", "Edit Content Kind")
 
                     toastr.options = {
                         "closeButton": false,
@@ -199,7 +201,7 @@
                 },
                 error: function(xhr, status, error) {
                     alert("Error!" + xhr.status + error);
-                    Command: toastr["error"]("Conten Kind Fail Edited !", "Edit Content Kind")
+                    Command: toastr["error"]("Content Kind Fail Edited !", "Edit Content Kind")
 
                     toastr.options = {
                         "closeButton": false,
@@ -232,7 +234,7 @@
                     success: function(data) {
                         $(".btn-close").click();
                         read();
-                        Command: toastr["success"]("Conten Kind Success Deleted!", "Delete Content Kind")
+                        Command: toastr["error"]("Content Kind Success Deleted !", "Delete Content Kind")
 
                         toastr.options = {
                             "closeButton": false,

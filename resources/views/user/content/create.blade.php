@@ -1,3 +1,6 @@
+{{-- <link rel="stylesheet" href="../../../ckeditor/contents.css" type="text/css"> --}}
+
+
 <div class="modal-header">
     <h5 class="modal-title" id="exampleModalLongTitle">Form Input Content Kind</h5>
     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
@@ -32,10 +35,12 @@
             <div class="col-md-12 mb-2 mt-5">
                 <input name="content" type="hidden">
                 <div class="form-group">
-                    {{-- <label> Content </label>
-                    <textarea class="form-control" id="content" placeholder="Enter the Description" name="content" rows="3"></textarea> --}}
-                    {{-- <div id="editor"></div> --}}
-                    <textarea></textarea>
+                    <label> Content </label>
+                    <textarea class="form-control" id="content" placeholder="Enter the Description" name="content" rows="3"></textarea>
+                    {{-- <div id="editor"></div>
+                    {{-- <div id="editor">
+                        <p>This is some sample content.</p>
+                    </div> --}}
                 </div>
             </div>
 
@@ -46,7 +51,8 @@
                 </div>
             </div>
             <div class="col-md-12 mb-2">
-                <img id="preview-image-before-upload" alt="preview image" style="width: 250px; " class="form-control">
+                <img id="preview-image-before-upload" alt="preview image" style="width: 220px; height: 260px; "
+                    class="form-control">
             </div>
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary" id="submit">Submit</button>
@@ -62,9 +68,19 @@
 </script> --}}
 
 
+<script>
+    ClassicEditor
+        .create(document.querySelector('#content'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+
+
 
 <script type="text/javascript">
     $(document).ready(function(e) {
+
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -93,10 +109,30 @@
                 processData: false,
                 success: (data) => {
                     this.reset();
-                    alert('Data Tersimpan');
-                    $(".btn-close").click();
+                    // alert('Data Tersimpan');
+                    $(".close").click();
                     // alert(data);
-                    read()
+                    read();
+                    Command: toastr["success"]("Content Success Added !",
+                        "Add Content Kind")
+
+                    toastr.options = {
+                        "closeButton": false,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": false,
+                        "positionClass": "toast-top-right",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    }
                 },
                 error: function(data) {
                     console.log(data);

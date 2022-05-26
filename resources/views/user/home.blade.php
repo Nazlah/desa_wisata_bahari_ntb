@@ -1,5 +1,4 @@
 @extends('user.template.main')
-
 @section('route')
     <h6 class="h2 text-white d-inline-block mb-0">Dashboards</h6>
     <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
@@ -53,5 +52,4 @@
 @endsection
 
 @section('container')
-    <h1>test Content User</h1>
 @endsection

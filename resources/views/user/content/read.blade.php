@@ -21,7 +21,8 @@
         <thead class="thead-dark">
             <tr>
                 <th>Name Content</th>
-                <th>Detail Content</th>
+                {{-- <th>Detail Content</th> --}}
+                <th>Added at</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -29,7 +30,8 @@
             @foreach ($data as $item)
                 <tr>
                     <td> {{ $item->name_content }}</td>
-                    <td>{{ $item->detail_content }}</td>
+                    {{-- <td>{{ $item->content }}</td> --}}
+                    <td>{{ $item->created_at }}</td>
                     <td>
                         <button class="btn btn-warning"
                             onClick="show('{{ $item->content_kind_id }}','{{ $item->id }}')">Edit</button>
