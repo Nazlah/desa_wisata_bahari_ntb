@@ -99,7 +99,7 @@
                     $(".close").click();
                     // alert(data);
                     read();
-                    Command: toastr["success"]("Conten Kind Success Edited !",
+                    Command: toastr["warning"]("Conten Kind Success Edited !",
                         "Edit Content Kind")
 
                     toastr.options = {

@@ -14,8 +14,7 @@
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+
         <!-- Main content -->
         <div class="main-content">
             <!-- Header -->
@@ -26,6 +25,14 @@
                             <div class="col-xl-5 col-lg-6 col-md-8 px-5">
                                 <h1 class="text-white">Welcome!</h1>
                             </div>
+                        </div>
+                        <div class="row justify-content-center">
+                          <!-- Validation Errors -->
+                            @if(session()->get('errors'))
+                                <div class="alert alert-danger col-lg-6" role="alert"  :errors="$errors">
+                                {{session()->get('errors')}}
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>

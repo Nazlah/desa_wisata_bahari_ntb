@@ -1,14 +1,12 @@
 @extends('admin.template.main')
 
-  
-
 @section('meta_token')
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<link rel="stylesheet" href="//cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css">
+<!-- <link rel="stylesheet" href="//cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css"> -->
 @endsection
 
 @section('route')
-    <h6 class="h2 text-white d-inline-block mb-0">User List/h6>
+    <h6 class="h2 text-white d-inline-block mb-0">User List</h6>
     <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
             <li class="breadcrumb-item"><a href="/admin/home"><i class="fas fa-home"></i></a></li>
@@ -64,13 +62,13 @@
 </div>
 
 @endsection
-
+@section('script')
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script src="//cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function() {
-        read()
+        read();
     });
     // Read Database
     function read() {
@@ -111,10 +109,11 @@
                 $(".btn-close").click();
                 $("#exampleModal").modal('hide');
                 read();
-                Command: toastr["error"]("Success Add User !", "Add User")
+                Command: toastr["success"]("Success Add User !", "Add User")
             },
              error: function(xhr, status, errors) {
                 Command: toastr["error"](xhr.responseJSON.message, "Add User Error")
+                read();
             }, 
         });
     }
@@ -145,11 +144,12 @@
                 $(".btn-close").click();
                 $("#exampleModal").modal('hide');
                 read();
-                Command: toastr["error"]("Success Edit User !", "Edit User")
+                Command: toastr["warning"]("Success Edit User !", "Edit User")
             },
-            // error: function(xhr, status, error) {
-            //     alert("Error!" + xhr.status + error);
-            // },
+            error: function(xhr, status, error) {
+                Command: toastr["error"](xhr.responseJSON.message, "Edit User Error");
+                read();
+            },
         });
     }
 
@@ -165,10 +165,11 @@
                     Command: toastr["error"]("User Success Deleted !", "Delete User")
                 },
                 error: function(xhr, status, errors) {
-                Command: toastr["error"](xhr.responseJSON.message, "Delete User Error")
+                Command: toastr["error"](xhr.responseJSON.message, "Delete User Error");
             }, 
             });
         }
     }
         
 </script>
+@endsection

@@ -10,7 +10,7 @@
 @endsection
 
 @section('card-body1')
-    <div class="col-xl-3 col-md-6">
+    <div class="col-xl-6 col-md-6">
         <div class="card card-stats">
             <!-- Card body -->
             <div class="card-body">
@@ -31,7 +31,7 @@
 @endsection
 
 @section('card-body2')
-    <div class="col-xl-3 col-md-6">
+    <div class="col-xl-6 col-md-6">
         <div class="card card-stats">
             <!-- Card body -->
             <div class="card-body">
