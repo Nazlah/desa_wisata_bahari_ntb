@@ -1,5 +1,5 @@
-
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
+
 <style>
     .dataTables_wrapper .dataTables_length,
     .dataTables_wrapper .dataTables_filter,

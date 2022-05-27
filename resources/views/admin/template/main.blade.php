@@ -33,6 +33,9 @@
         <div class="main-content" id="panel">
             
             @include('admin.template.topnav')
+            
+            <!-- Header -->
+            @include('admin.template.header')
 
             @yield('container')
         </div>
