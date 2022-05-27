@@ -17,32 +17,27 @@
 
 
 @section('container')
-<div class="header bg-primary pb-6" style="height: 40%; margin-bottom: -14%;"></div>
-<div class="container mt-5">
-    <div class="row align-items-center py-4">
-        <div class="container-fluid mt--6">
-            <div class="row">
-                <div class="col">
-                    <div class="card bg-default">
-                        <div class="col-lg-12">
-                            <div class="row mt-4">
-                                <div class="col text-left">
-                                    <h1 class="text-white mt-2 d-inline">User List</h1>
-                                </div>
-                                <div class="col text-right">
-                                    <button type="button" class="ml-4 align-items-center btn btn-primary d-inline"
-                                        onClick="create()">+ Add User</button>
-                                </div>
+    <div class="container-fluid mt--6">
+        <div class="row">
+            <div class="col">
+                <div class="card bg-default">
+                    <div class="col-lg-12">
+                        <div class="row mt-4">
+                            <div class="col text-left">
+                                <h1 class="text-white mt-2 d-inline">User List</h1>
                             </div>
-                            <hr class="my-3">
-                            <div id="read" class="mt-3"></div>
+                            <div class="col text-right">
+                                <button type="button" class="ml-4 align-items-center btn btn-primary d-inline"
+                                    onClick="create()">+ Add User</button>
+                            </div>
                         </div>
+                        <hr class="my-3">
+                        <div id="read" class="mt-3"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
