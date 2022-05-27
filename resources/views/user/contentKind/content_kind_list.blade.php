@@ -179,7 +179,7 @@
                 success: function(data) {
                     $(".close").click();
                     read();
-                    Command: toastr["success"]("Content Kind Success Edited !", "Edit Content Kind")
+                    Command: toastr["warning"]("Content Kind Success Edited !", "Edit Content Kind")
 
                     toastr.options = {
                         "closeButton": false,

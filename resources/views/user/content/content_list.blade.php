@@ -79,13 +79,9 @@
 @endsection
 
 @section('script')
-    {{-- <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script> --}}
-    {{-- <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'>
-    </script> --}}
-    {{-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> --}}
-    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/balloon-block/ckeditor.js"></script> --}}
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-
+    <script src="//cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function() {
             read()
