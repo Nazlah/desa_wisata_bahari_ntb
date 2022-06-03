@@ -7,7 +7,7 @@
   <meta name="description" content="An impressive and flawless site template that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional website.">
   <meta name="keywords" content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
   <meta name="author" content="elemis">
-  <title>Sandbox - Modern & Multipurpose Bootstrap 5 Template</title>
+  <title>wisata bahari tolouwi</title>
   <link rel="shortcut icon" href="./assets/home/assets/img/favicon.png">
   <link rel="stylesheet" href="./assets/home/assets/css/plugins.css">
   <link rel="stylesheet" href="./assets/home/assets/css/style.css">
@@ -22,7 +22,7 @@
         <div class="container flex-lg-row flex-nowrap align-items-center">
           <div class="navbar-brand w-50">
             <a href="{{ url('/dashboard') }}">
-              <img src="./assets/home/assets/img/logo-dark.png" srcset="./assets/home/assets/img/logo-dark@2x.png 2x" alt="" />
+              <img src="./assets/home/assets/img/logo-bahari.png" srcset="./assets/home/assets/img/logo-bahari.png" alt="" />
             </a>
           </div>
           <div class="navbar-collapse offcanvas offcanvas-nav">
@@ -33,13 +33,13 @@
             <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog</a>
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blog </a>
                     </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Galery</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About Us</a>
                     </li>
                     
                     <li class="nav-item d-lg-none">
@@ -96,8 +96,8 @@
             <div class="container">
               <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center text-center text-lg-start">
                 <div class="col-lg-6" data-cues="slideInDown" data-group="page-title" data-delay="900">
-                  <h1 class="display-2 mb-4 me-xl-5 me-xxl-0">Networking <span class="text-gradient gradient-1">solutions</span> for worldwide communication</h1>
-                  <p class="lead fs-23 lh-sm mb-7 pe-xxl-15">We're a company that focuses on establishing long-term relationships with customers.</p>
+                  <h1 class="display-2 mb-4 me-xl-5 me-xxl-0">Selamat  <span class="text-gradient gradient-1">Datang</span> Desa Wisata Bahari Tolouwi, NTB.</h1>
+                  <p class="lead fs-23 lh-sm mb-7 pe-xxl-15">wisata bahari Tolouwi.</p>
                   <span><a href="#" class="btn btn-lg btn-gradient gradient-1 rounded">Explore Now</a></span>
                 </div>
                 <!--/column -->
@@ -125,40 +125,30 @@
            <!--/.row -->
         <div class="row gx-md-8 gy-10 align-items-center">
           <div class="col-lg-6 offset-lg-1 order-lg-2 position-relative">
-            <figure class="rounded"><img class="img-fluid" src="./assets/home/assets/img/photos/about27.jpg" srcset="./assets/home/assets/img/photos/about27@2x.jpg 2x" alt="" /></figure>
+            <figure class="rounded"><img class="img-fluid" src="./assets/home/assets/img/photos/blog-1.jpg" srcset="./assets/home/assets/img/photos/blog-1.jpg" alt="" /></figure>
             <div class="card shadow-lg position-absolute d-none d-md-block" style="top: 15%; left: -7%">
               <div class="card-body py-4 px-5">
-                <div class="d-flex flex-row align-items-center">
-                  <div>
-                    <img src="./assets/home/assets/img/icons/solid/cloud-group.svg" class="svg-inject icon-svg icon-svg-sm solid-duo text-grape-fuchsia me-3" alt="" />
-                  </div>
-                  <div>
-                    <h3 class="fs-25 counter mb-0 text-nowrap">25000+</h3>
-                    <p class="fs-16 lh-sm mb-0 text-nowrap">Happy Clients</p>
-                  </div>
-                </div>
+
               </div>
               <!--/.card-body -->
             </div>
             <!--/.card -->
-            <div class="card shadow-lg position-absolute text-center d-none d-md-block" style="bottom: 10%; left: -10%;">
-              <div class="card-body p-6">
-                <div class="progressbar semi-circle fuchsia mb-3" data-value="80"></div>
-                <h4 class="mb-0">Time Saved</h4>
-              </div>
-              <!--/.card-body -->
-            </div>
-            <!--/.card -->
+
           </div>
           <!--/column -->
           <div class="col-lg-5">
-            <h2 class="fs-16 text-uppercase text-gradient gradient-1 mb-3">What Makes Us Different?</h2>
-            <h3 class="display-4 mb-4 me-lg-n5">We make spending stress free so you have the perfect control.</h3>
-            <p class="mb-6">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus. Integer posuere erat a ante venenatis dapibus posuere velit.</p>
+            <h2 class="fs-16 text-uppercase text-gradient gradient-1 mb-3">About Us Wisata Bahari Tolouwi</h2>
+            <h3 class="display-4 mb-4 me-lg-n5">Desa tolouwi Kecamatan Monta Kabupaten Bima </h3>
+            <p class="mb-6">Tentang Kerajaan Kalepe dan sanga Ratu Putri LABIBANO. Putri yang cantik nan anggun berambut panjang membuat semua para kaum bangsawan tergila2 kepada nya dan kini ia telah menjelma Menjadi nyale dan menghilang.
+             </p>
             <ul class="icon-list bullet-bg bullet-soft-primary">
-              <li><i class="uil uil-check"></i>Aenean eu leo quam. Pellentesque ornare.</li>
-              <li><i class="uil uil-check"></i>Nullam quis risus eget urna mollis ornare.</li>
-              <li><i class="uil uil-check"></i>Donec id elit non mi porta gravida at eget.</li>
+              <p> Berbagai Macam Tempat Dari wisata sampai Homestay</p>
+              <li><i class="uil uil-check"></i>Berbagai Macam Wisata</li>
+              <li><i class="uil uil-check"></i>Areal Parkir</li>
+              <li><i class="uil uil-check"></i>Homestay</li>
+              <li><i class="uil uil-check"></i>Kuliner</li>
+              <li><i class="uil uil-check"></i>Kios Sovenir</li>
+              <li><i class="uil uil-check"></i>Festival Budaya</li>
             </ul>
           </div>
           <!--/column -->
@@ -184,8 +174,8 @@
         <!-- /.grid-view -->
         <div class="row text-center">
           <div class="col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-            <h2 class="fs-16 text-uppercase text-gradient gradient-1 mb-3">Case Studies</h2>
-            <h3 class="display-4 mb-9 me-lg-n5">Check out some of our awesome projects with creative ideas and great design.</h3>
+            <h2 class="fs-16 text-uppercase text-gradient gradient-1 mb-3">Blog Desa Wisata Tolouwi</h2>
+            <h3 class="display-4 mb-9 me-lg-n5">.</h3>
           </div>
           <!-- /column -->
         </div>
@@ -195,19 +185,19 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <article>
-                  <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#"> <img src="./assets/home/assets/img/photos/b4.jpg" alt="" /></a>
+                  <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#"> <img src="./assets/home/assets/img/photos/artikel_1.jpg" alt="" /></a>
                     <figcaption>
                       <h5 class="from-top mb-0">Read More</h5>
                     </figcaption>
                   </figure>
                   <div class="post-header">
-                    <h2 class="post-title h3 mb-3"><a class="link-dark" href="./blog-post.html">Ligula tristique quis risus</a></h2>
+                    <h2 class="post-title h3 mb-3"><a class="link-dark" href="./blog-post.html">Rimpu Mbojo</a></h2>
                   </div>
                   <!-- /.post-header -->
                   <div class="post-footer">
                     <ul class="post-meta">
-                      <li class="post-date"><i class="uil uil-calendar-alt"></i><span>14 Apr 2021</span></li>
-                      <li class="post-comments"><a href="#"><i class="uil uil-file-alt fs-15"></i>Coding</a></li>
+                      <li class="post-date"><i class="uil uil-calendar-alt"></i><span>14 Apr 2022</span></li>
+                      <li class="post-comments"><a href="#"><i class="uil uil-file-alt fs-15"></i>Adat</a></li>
                     </ul>
                     <!-- /.post-meta -->
                   </div>
@@ -218,19 +208,19 @@
               <!--/.swiper-slide -->
               <div class="swiper-slide">
                 <article>
-                  <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#"> <img src="./assets/home/assets/img/photos/b5.jpg" alt="" /></a>
+                  <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#"> <img src="./assets/home/assets/img/photos/artikel-5.jpg" alt="" /></a>
                     <figcaption>
                       <h5 class="from-top mb-0">Read More</h5>
                     </figcaption>
                   </figure>
                   <div class="post-header">
-                    <h2 class="post-title h3 mb-3"><a class="link-dark" href="./blog-post.html">Nullam id dolor elit id nibh</a></h2>
+                    <h2 class="post-title h3 mb-3"><a class="link-dark" href="./blog-post.html">Wisata Lumba-Lumba</a></h2>
                   </div>
                   <!-- /.post-header -->
                   <div class="post-footer">
                     <ul class="post-meta">
-                      <li class="post-date"><i class="uil uil-calendar-alt"></i><span>29 Mar 2021</span></li>
-                      <li class="post-comments"><a href="#"><i class="uil uil-file-alt fs-15"></i>Workspace</a></li>
+                      <li class="post-date"><i class="uil uil-calendar-alt"></i><span>29 Mar 2022</span></li>
+                      <li class="post-comments"><a href="#"><i class="uil uil-file-alt fs-15"></i>wisata</a></li>
                     </ul>
                     <!-- /.post-meta -->
                   </div>
@@ -241,19 +231,19 @@
               <!--/.swiper-slide -->
               <div class="swiper-slide">
                 <article>
-                  <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#"> <img src="./assets/home/assets/img/photos/b6.jpg" alt="" /></a>
+                  <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#"> <img src="./assets/home/assets/img/photos/artikel_3.jpg" alt="" /></a>
                     <figcaption>
                       <h5 class="from-top mb-0">Read More</h5>
                     </figcaption>
                   </figure>
                   <div class="post-header">
-                    <h2 class="post-title h3 mb-3"><a class="link-dark" href="./blog-post.html">Ultricies fusce porta elit</a></h2>
+                    <h2 class="post-title h3 mb-3"><a class="link-dark" href="./blog-post.html">Festival Pesona La Bibano</a></h2>
                   </div>
                   <!-- /.post-header -->
                   <div class="post-footer">
                     <ul class="post-meta">
-                      <li class="post-date"><i class="uil uil-calendar-alt"></i><span>26 Feb 2021</span></li>
-                      <li class="post-comments"><a href="#"><i class="uil uil-file-alt fs-15"></i>Meeting</a></li>
+                      <li class="post-date"><i class="uil uil-calendar-alt"></i><span>11 April 2020</span></li>
+                      <li class="post-comments"><a href="#"><i class="uil uil-file-alt fs-15"></i>Festival</a></li>
                     </ul>
                     <!-- /.post-meta -->
                   </div>
@@ -264,18 +254,18 @@
               <!--/.swiper-slide -->
               <div class="swiper-slide">
                 <article>
-                  <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#"> <img src="./assets/home/assets/img/photos/b7.jpg" alt="" /></a>
+                  <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#"> <img src="./assets/home/assets/img/photos/about_1.jpg" alt="" /></a>
                     <figcaption>
                       <h5 class="from-top mb-0">Read More</h5>
                     </figcaption>
                   </figure>
                   <div class="post-header">
-                    <h2 class="post-title h3 mb-3"><a class="link-dark" href="./blog-post.html">Morbi leo risus porta eget</a></h2>
+                    <h2 class="post-title h3 mb-3"><a class="link-dark" href="./blog-post.html">Wisata Batu Unta</a></h2>
                   </div>
                   <div class="post-footer">
                     <ul class="post-meta">
                       <li class="post-date"><i class="uil uil-calendar-alt"></i><span>7 Jan 2021</span></li>
-                      <li class="post-comments"><a href="#"><i class="uil uil-file-alt fs-15"></i>Business Tips</a></li>
+                      <li class="post-comments"><a href="#"><i class="uil uil-file-alt fs-15"></i>Wisata</a></li>
                     </ul>
                     <!-- /.post-meta -->
                   </div>
@@ -294,15 +284,15 @@
           <div class="col-lg-6">
             <div class="row gx-md-5 gy-5">
               <div class="col-md-6">
-                <figure class="rounded"><img src="./assets/home/assets/img/photos/g12.jpg" srcset="./assets/home/assets/img/photos/g12@2x.jpg 2x" alt=""></figure>
+                <figure class="rounded"><img src="./assets/home/assets/img/photos/about-4.jpg" srcset="./assets/home/assets/img/photos/about-4.jpg 2x" alt=""></figure>
               </div>
               <!--/column -->
               <div class="col-md-6 align-self-end">
-                <figure class="rounded"><img src="./assets/home/assets/img/photos/g13.jpg" srcset="./assets/home/assets/img/photos/g13@2x.jpg 2x" alt=""></figure>
+                <figure class="rounded"><img src="./assets/home/assets/img/photos/about-6.jpg" srcset="./assets/home/assets/img/photos/about-6.jpg 2x" alt=""></figure>
               </div>
               <!--/column -->
               <div class="col-12">
-                <figure class="rounded mx-md-5"><img src="./assets/home/assets/img/photos/g11.jpg" srcset="./assets/home/assets/img/photos/g11@2x.jpg 2x" alt=""></figure>
+                <figure class="rounded mx-md-5"><img src="./assets/home/assets/img/photos/about-7.jpg" srcset="./assets/home/assets/img/photos/about-7.jpg 2x" alt=""></figure>
               </div>
               <!--/column -->
             </div>
@@ -310,65 +300,30 @@
           </div>
           <!--/column -->
           <div class="col-lg-6">
-            <h2 class="fs-16 text-uppercase text-gradient gradient-1 mb-3">Who Are We?</h2>
-            <h3 class="display-4 mb-4">Company that believes in the power of creative strategy.</h3>
-            <p class="mb-6">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed.</p>
+            <h2 class="fs-16 text-uppercase text-gradient gradient-1 mb-3">Galery Wisata Bahari Tolouwi</h2>
+            <h3 class="display-4 mb-4"> Desa tolouwi Kecamatan Monta Kabupaten Bima</h3>
+            <p class="mb-6">terdapat tempat wisata Tolouwi yang ada di kabupaten Bima Nusa Tenggara Barat ini memiliki 
+              beberapa wisata yang masih banyak didatangi oleh berbagai wisatawan yang dari luar pulau dan juga luar negri  diantaranya 
+              wisata yang ada di Desa Wisata Bahari Tolouwi 
+
+            </p>
             <div class="row gy-3 gx-xl-8">
               <div class="col-xl-6">
                 <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
-                  <li><span><i class="uil uil-check"></i></span><span>Aenean eu leo quam ornare curabitur blandit tempus.</span></li>
-                  <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Nullam quis risus eget urna mollis ornare donec elit.</span></li>
+                  <li><span><i class="uil uil-check"></i></span><span>Wisata Batu Unta.</span></li>
+                  <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Wisata Lumba-Lumba</span></li>
                 </ul>
               </div>
               <!--/column -->
               <div class="col-xl-6">
                 <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
-                  <li><span><i class="uil uil-check"></i></span><span>Etiam porta sem malesuada magna mollis euismod.</span></li>
-                  <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Fermentum massa vivamus faucibus amet euismod.</span></li>
+                  <li><span><i class="uil uil-check"></i></span><span>Wisata SNOERKLING.</span></li>
                 </ul>
+              </div>
               </div>
               <!--/column -->
             </div>
             <!--/.row -->
-          </div>
-          <!--/column -->
-        </div>
-        <!--/.row -->
-       <div class="row gx-3 gy-10 mb-15 mb-md-18 align-items-center">
-          <div class="col-lg-6">
-            <figure><img class="w-auto" src="./assets/home/assets/img/illustrations/3d3.png" srcset="./assets/home/assets/img/illustrations/3d3@2x.png 2x" alt="" /></figure>
-          </div>
-          <!--/column -->
-          <div class="col-lg-5 offset-lg-1">
-            <h2 class="fs-16 text-uppercase text-gradient gradient-1 mb-3">Contact Us</h2>
-            <h3 class="display-4 mb-8">Got any questions? Don't hesitate to get in touch.</h3>
-            <div class="d-flex flex-row">
-              <div>
-                <img src="./assets/home/assets/img/icons/solid/pin.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-grape-fuchsia mt-1 me-4" style="width: 1.5rem; height: 1.5rem;" alt="" />
-              </div>
-              <div>
-                <h5 class="mb-0">Address</h5>
-                <address>Moonshine St. 14/05 Light City, London</address>
-              </div>
-            </div>
-            <div class="d-flex flex-row">
-              <div>
-                <img src="./assets/home/assets/img/icons/solid/rotary.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-grape-fuchsia mt-1 me-4" style="width: 1.5rem; height: 1.5rem;" alt="" />
-              </div>
-              <div>
-                <h5 class="mb-0">Phone</h5>
-                <p>00 (123) 456 78 90</p>
-              </div>
-            </div>
-            <div class="d-flex flex-row">
-              <div>
-                <img src="./assets/home/assets/img/icons/solid/emails.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-grape-fuchsia mt-1 me-4" style="width: 1.5rem; height: 1.5rem;" alt="" />
-              </div>
-              <div>
-                <h5 class="mb-0">E-mail</h5>
-                <p class="mb-0"><a href="mailto:sandbox@email.com" class="link-body">sandbox@email.com</a></p>
-              </div>
-            </div>
           </div>
           <!--/column -->
         </div>
@@ -392,8 +347,27 @@
         <div class=" row gy-6 gy-lg-0">
       <div class="col-md-4 col-lg-3">
         <div class="widget">
-          <img class="mb-4" src="./assets/home/assets/img/logo-dark.png" srcset="./assets/home/assets/img/logo-dark@2x.png 2x" alt="" />
-          <p class="mb-4">© 2021 Sandbox. <br class="d-none d-lg-block" />All rights reserved.</p>
+          <img class="mb-4" src="./assets/home/assets/img/logo-bahari.png" srcset="./assets/home/assets/img/logo-bahari.png 2x" alt="" />
+          <p class="mb-4">contack US <br class="d-none d-lg-block" /></p>
+          <div class="d-flex flex-row">
+          
+              <div>
+                <img src="./assets/home/assets/img/icons/solid/rotary.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-grape-fuchsia mt-1 me-4" style="width: 1.5rem; height: 1.5rem;" alt="" />
+              </div>
+              <div>
+                <h5 class="mb-0">Phone</h5>
+                <p>00 (123) 456 78 90</p>
+              </div>
+            </div>
+          <div class="d-flex flex-row">
+              <div>
+                <img src="./assets/home/assets/img/icons/solid/emails.svg" class="svg-inject icon-svg icon-svg-xs solid-duo text-grape-fuchsia mt-1 me-4" style="width: 1.5rem; height: 1.5rem;" alt="" />
+              </div>
+              <div>
+                <h5 class="mb-0">E-mail</h5>
+                <p class="mb-0"><a href="mailto:sandbox@email.com" class="link-body">sandbox@email.com</a></p>
+              </div>
+            </div>
           <nav class="nav social ">
             <a href="#"><i class="uil uil-twitter"></i></a>
             <a href="#"><i class="uil uil-facebook-f"></i></a>
@@ -420,10 +394,9 @@
           <h4 class="widget-title  mb-3">Learn More</h4>
           <ul class="list-unstyled text-reset mb-0">
             <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Galery</a></li>
+            <li><a href="#">Blog</a></li>
+
           </ul>
         </div>
         <!-- /.widget -->
